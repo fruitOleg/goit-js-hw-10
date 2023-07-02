@@ -17,7 +17,7 @@ function fetchBreeds() {
 }
 
 selectItem.hidden = true;
-loadTxt.hidden = true;
+loadTxt.hidden = false;
 errTxt.hidden = true;
 
 fetchBreeds()
