@@ -26,10 +26,10 @@ fetchBreeds()
     loadTxt.hidden = false;
 
     for (const item of data) {
-      const itemList = document.createElement('option');
-      selectItem.append(itemList);
-      itemList.value = item.id;
-      itemList.textContent = item.name;
+      const listItem = document.createElement('option');
+      selectItem.append(listItem);
+      listItem.value = item.id;
+      listItem.textContent = item.name;
     }
 
     selectItem.hidden = false;
@@ -57,13 +57,13 @@ function fetchCatByBreed(breedId) {
     })
     .then(data => {
       for (const item of data) {
-        item.breeds.map(({ name, description, temperament }) => {
+        item.breeds.map(({ name, descr, temp }) => {
           showItem.innerHTML = `<ul style=list-style:none>
                 <li>
                     <img src="${item.url}" height=400px></img>
                     <h3>${name}</h3>
-                    <p>${description}</p>
-                    <p><b>Temperament:</b> ${temperament}</p>
+                    <p>${descr}</p>
+                    <p><b>Temperament:</b> ${temp}</p>
                 </li>
             </ul>`;
         });
