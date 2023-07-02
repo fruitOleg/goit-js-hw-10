@@ -43,7 +43,6 @@ p {
   margin-bottom: 20px;
 }
 
-.loader,
 .error {
   display: none;
   font-size: 18px;
@@ -53,7 +52,7 @@ p {
 
 .loader::after {
   content: '';
-  display: inline-block;
+  /* display: inline-block; */
   width: 18px;
   height: 18px;
   border-radius: 50%;
